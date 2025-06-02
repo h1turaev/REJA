@@ -14,7 +14,7 @@ const http = require("http");
 
 
 // 1.Kirish code
-app.use(express.static("public"));                  // public - bu papka nomi, u yerda statik fayllar joylashgan va har qanday browserlardan keladigan zaproslarga public papkasidagi fayllar orqali javob qaytaradi.
+app.use(express.static("public"));  // public - bu papka nomi, u yerda statik fayllar joylashgan va har qanday browserlardan keladigan zaproslarga public papkasidagi fayllar orqali javob qaytaradi.
 app.use(express.json());                            // Kirib kelayotgan JSON formatidagi datalarni objectga holatiga aylantirib beradi. client hamda server o'rtasidagi datalar JSON formatida boladi.
 app.use(express.urlencoded({ extended: true }));    // Traditional Form Request ya'ni html formdan keladigan zaproslarni object holatida qabul qiladi. Agar bu kodni yozmasak formdan keladigan zaproslarni express qabul qilmaydi neglect qiladi yani ignore qiladi.
 
