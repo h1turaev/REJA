@@ -2,7 +2,7 @@ console.log('Web serverni boshlash');
 const express = require("express"); // Express frameworkini chaqirish
 const app = express();              // app(object) - Bu yerda intance, "Instance" degani — biror narsaning ishlaydigan, real nusxasi.
 const http = require("http");
-const fs = require("fs"); // File System modulini chaqirish
+const fs = require("fs"); 
 
 let user;
 fs.readFile("database/user.json", "utf8", (err, data) => {
@@ -51,7 +51,7 @@ app.post("/create-item", (req, res) => {
 res.json({test:"success"});
 });
 
-app.get('/author', (req, res) => {
+app.get("/author", (req, res) => {
     res.render("author", {user: user});
 });
 
